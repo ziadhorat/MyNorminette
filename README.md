@@ -1,5 +1,6 @@
 # MyNorminette (Extremely basic)
 ### Features
+![alt text](https://i.imgur.com/AW9MLPw.jpg)
 ###### Formatted output of error msgs
 ###### Displays total Lines/Errors
 
