@@ -6,11 +6,11 @@
 #    By: zmahomed <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/27 06:56:37 by zmahomed          #+#    #+#              #
-#    Updated: 2019/03/23 03:25:46 by zmahomed         ###   ########.fr        #
+#    Updated: 2019/03/23 17:49:26 by zmahomed         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = MyNorminette
+NAME = norminette
 
 SRC = ./srcs/*.c
 
@@ -20,7 +20,7 @@ FLAG = -Wall -Werror -Wextra
 
 INCLUDE = ./includes/*.h
 
-all: $(NAME)
+all: $(NAME) clean
 
 $(NAME):
 	gcc -c $(FLAG) $(SRC)

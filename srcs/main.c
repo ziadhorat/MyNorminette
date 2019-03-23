@@ -6,7 +6,7 @@
 /*   By: zmahomed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/27 07:28:15 by zmahomed          #+#    #+#             */
-/*   Updated: 2019/03/23 15:27:21 by zmahomed         ###   ########.fr       */
+/*   Updated: 2019/03/23 17:54:23 by zmahomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,10 @@ int		disp_file(char *str)
 						printf("\033[96;1m%i\033[0m : \033[31m%i\033[0m lines in func\n",line_num ,func_line - 1);
 					else
 						func_line++;
+				}
+				if (buf[i + 1] == '\n' && buf[i + 2] == '\0')
+				{
+					printf("\033[96;1m%i\033[0m : Empty line at the end of the file\n",line_num);
 				}
 			}
 			i++;
