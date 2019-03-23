@@ -6,7 +6,7 @@
 /*   By: zmahomed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/27 07:28:15 by zmahomed          #+#    #+#             */
-/*   Updated: 2019/03/23 15:23:01 by zmahomed         ###   ########.fr       */
+/*   Updated: 2019/03/23 15:27:21 by zmahomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int		disp_file(char *str)
 					if (buf[i + 1] == '}')
 						func_count = 0;
 					if (buf[i + 1] == '}' && func_line - 1 > 25)
-						printf("\033[96;1m%i\033[0m : \033[31;1m%i\033[0m lines in func\n",line_num ,func_line - 1);
+						printf("\033[96;1m%i\033[0m : \033[31m%i\033[0m lines in func\n",line_num ,func_line - 1);
 					else
 						func_line++;
 				}

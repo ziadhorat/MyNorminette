@@ -8,7 +8,7 @@
 ###### Incorrect header (Based on no. of lines)
 ###### Empty line after header (Only checks if header is perfect)
 ###### All pre-processors at top of file (Technically only makes sure they're all together)
+###### Too many lines in function (Based on open and curly braces { })
 
 ### To-Detect
 ###### New line after pre-proc
-###### Function line counter
