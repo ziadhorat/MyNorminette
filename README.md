@@ -1,8 +1,7 @@
 # MyNorminette (Extremely basic)
 ### Features
-Formatted output
-
-Displays total lines+chars scanned
+##### Formatted output of error msgs
+##### Displays total Lines + Errors
 
 ### Done
 Incorrect header
