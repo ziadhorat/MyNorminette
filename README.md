@@ -15,4 +15,5 @@
 ###### ⚫Too many lines in function (Based on open and curly braces { })
 
 ### To-Detect
-###### ⚫New line after pre-proc
+###### ⚫New line after pre-proc (Checks for '\n' after the final '#')
+###### ⚫Trailing spaces (Spaces before ' ' or '\t')
