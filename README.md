@@ -17,3 +17,5 @@
 ### To-Detect
 ###### ⚫New line after pre-proc (Checks for '\n' after the final '#')
 ###### ⚫Trailing spaces (Spaces before ' ' or '\t')
+###### ⚫Final line can't be empy ('\0' after '\n')
+###### ⚫Space after while/if/return etc
