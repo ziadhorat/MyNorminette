@@ -6,7 +6,7 @@
 /*   By: zmahomed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/27 07:28:15 by zmahomed          #+#    #+#             */
-/*   Updated: 2019/03/23 03:04:52 by zmahomed         ###   ########.fr       */
+/*   Updated: 2019/03/23 15:23:01 by zmahomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int		disp_file(char *str)
 	int		ret;
 	int		i = 0;
 	int		line_num = 0;
+	int		func_line = 0;
+	int		func_count = 0;
 	int		errors = 0;
 	int		pre_proc = 0;
 	char	buf[BUF_SIZE + 1];
@@ -58,16 +60,29 @@ int		disp_file(char *str)
 						pre_proc++;
 					}	
 				}
-				else if (buf[i + 2] == '\n')
+				else if (buf[i + 1] == '\n' && buf[i + 2] == '\n')
 				{
 					printf("\033[96;1m%i\033[0m : Empty line\n",line_num);
+				}
+				if (buf[i + 1] == '{' && func_count == 0)
+				{
+					func_count = 1;
+					func_line = 0;
+				}
+				if (func_count == 1)
+				{
+					if (buf[i + 1] == '}')
+						func_count = 0;
+					if (buf[i + 1] == '}' && func_line - 1 > 25)
+						printf("\033[96;1m%i\033[0m : \033[31;1m%i\033[0m lines in func\n",line_num ,func_line - 1);
+					else
+						func_line++;
 				}
 			}
 			i++;
 		}
 		close(fd);
 		printf("\n\033[33;1mLines: %i",line_num);
-		printf("\n\033[33;1mChars: %i",i);
 		printf("\n\033[31;1mErrors: %i",errors);
 		printf("\033[0m\n");
 		return (1);
@@ -84,7 +99,7 @@ int		main(int ac, char **av)
 		printf("Too many arguments.");
 	if (ac == 2)
 	{
-		printf("\033[33;1mNorminette : %s\n\n\033[0m",av[1]);
+		printf("\033[33;1mFile: %s\n\n\033[0m",av[1]);
 		disp_file(av[1]);
 	}
 	return (0);

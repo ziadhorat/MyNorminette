@@ -5,16 +5,68 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmahomed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/23 03:04:59 by zmahomed          #+#    #+#             */
-/*   Updated: 2019/03/23 03:07:38 by zmahomed         ###   ########.fr       */
+/*   Created: 2019/03/23 15:23:36 by zmahomed          #+#    #+#             */
+/*   Updated: 2019/03/23 15:23:41 by zmahomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "things"
 
-things
--Detects header (based on line count)
--Detects empty line after header
--Makes sure all pre-proc are at the top
+int		main(void)
+{
+	line 1
+	line 2
+	line 3
+	line 4
+	line 5
+	line 6
+	line 7
+	line 8
+	line 9
+	line 10
+	line 11
+	line 12
+	line 13
+	line 14
+	line 15
+	line 16
+	line 17
+	line 18
+	line 19
+	line 20
+	line 21
+	line 22
+	line 23
+	line 24
+	return (3);
+}
 
-to-do
--new line after pre-proc
+int		main(void)
+{
+	line 1
+	line 2
+	line 3
+	line 4
+	line 5
+	line 6
+	line 7
+	line 8
+	line 9
+	line 10
+	line 11
+	line 12
+	line 13
+	line 14
+	line 15
+	line 16
+	line 17
+	line 18
+	line 19
+	line 20
+	line 21
+	line 22
+	line 23
+	line 24
+	line 25
+	return (3);
+}
