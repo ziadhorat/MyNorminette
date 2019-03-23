@@ -4,6 +4,8 @@
 ###### Displays total Lines/Errors
 
 ### Detects
+
+Empty lines (Gives error if there at 2 '\n' next to each other)
 Incorrect header (Based on no. of lines)
 
 Empty line after header (Only checks if header is perfect)
