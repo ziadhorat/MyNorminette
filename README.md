@@ -1,17 +1,14 @@
 # MyNorminette (Extremely basic)
 ### Features
-Formatted output
+###### Formatted output of error msgs
+###### Displays total Lines/Errors
 
-Displays total lines+chars scanned
+### Detects
+###### Empty lines (Gives error if there are multiple '\n's next to each other)
+###### Incorrect header (Based on no. of lines)
+###### Empty line after header (Only checks if header is perfect)
+###### All pre-processors at top of file (Technically only makes sure they're all together)
 
-### Done
-Incorrect header
-
-Empty line after header
-
-All pre-processors at top of file
-
-### To-Do
-New line after pre-proc
-
-Function line counter
+### To-Detect
+###### New line after pre-proc
+###### Function line counter
