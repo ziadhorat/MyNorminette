@@ -13,9 +13,9 @@
 ###### ⚫Empty line after header (Only checks if header is perfect)
 ###### ⚫All pre-processors at top of file (Technically only makes sure they're all together)
 ###### ⚫Too many lines in function (Based on open and close curly braces { })
+###### ⚫Final line can't be empy ('\0' after '\n' & '\n')
 
 ### To-Detect
 ###### ⚫New line after pre-proc (Checks for '\n' after the final '#')
 ###### ⚫Trailing spaces (Spaces before ' ' or '\t')
-###### ⚫Final line can't be empy ('\0' after '\n')
 ###### ⚫Space after while/if/return etc
