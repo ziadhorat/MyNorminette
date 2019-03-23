@@ -3,14 +3,14 @@
 ###### Formatted output of error msgs
 ###### Displays total Lines/Errors
 
-### Done
-Incorrect header
+### Detects
+Incorrect header (Based on no. of lines)
 
-Empty line after header
+Empty line after header (Only checks if header is perfect)
 
-All pre-processors at top of file
+All pre-processors at top of file (Technically only makes sure they're all together)
 
-### To-Do
+### To-Detect
 New line after pre-proc
 
 Function line counter
