@@ -1,6 +1,7 @@
 # MyNorminette (Extremely basic)
 ### Features
 > Formatted output of error msgs
+
 > Displays total Lines + Errors
 
 ### Done
