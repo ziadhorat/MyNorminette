@@ -5,8 +5,7 @@
   <img src="https://i.imgur.com/AW9MLPw.jpg">
 </p>
 
-###### Formatted output of error msgs
-###### Displays total Lines/Errors
+
 
 ### Detects
 ###### Empty lines (Gives error if there are multiple '\n's next to each other)
