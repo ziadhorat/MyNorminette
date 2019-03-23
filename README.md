@@ -4,8 +4,6 @@
 <p align="center">
   <img src="https://i.imgur.com/AW9MLPw.jpg">
 </p>
-
-![alt text](https://i.imgur.com/AW9MLPw.jpg)
 ###### Formatted output of error msgs
 ###### Displays total Lines/Errors
 
