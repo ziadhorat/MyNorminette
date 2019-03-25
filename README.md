@@ -5,13 +5,11 @@
   <img src="https://i.imgur.com/AW9MLPw.jpg">
 </p>
 
-
-
 ### Note
 ###### ⚫Only works on .c files
 ###### ⚫This is extremely messy code, I'm just trying to get basic detection working
 
-### Detects
+### Things that work??? (I didn't test)
 ###### ⚫Empty lines (Gives error if there are multiple '\n's next to each other)
 ###### ⚫Incorrect header (Based on no. of lines that start with '/')
 ###### ⚫Empty line after header (Only checks if header is perfect)
@@ -20,10 +18,12 @@
 ###### ⚫Final line can't be empty ('\0' after '\n' & '\n')
 ###### ⚫Trailing spaces (Spaces before ' ' or '\t')
 
-### To-Detect
-###### ⚫Space after while/if/return etc
+### Buggggz (I'll fix this...maybe?)
+###### ⚫All pre-processors at top of file (Technically only makes sure they're all together)
+
+### Coming soon (I'll do it at some point)
 ###### ⚫80 character per line
 ###### ⚫5 functions per file
-
-### To-Fix
-###### ⚫All pre-processors at top of file (Technically only makes sure they're all together)
+###### ⚫Space after while/if/return etc
+###### ⚫If theres a curly brace, there can't be anything else on the line
+###### ⚫Declaration and initialization can't be on the same line
