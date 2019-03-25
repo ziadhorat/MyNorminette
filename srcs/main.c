@@ -6,7 +6,7 @@
 /*   By: zmahomed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/27 07:28:15 by zmahomed          #+#    #+#             */
-/*   Updated: 2019/03/25 18:56:50 by zmahomed         ###   ########.fr       */
+/*   Updated: 2019/03/25 19:00:19 by zmahomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ int		disp_file(char *str)
 				if (pre_proc == 2 && buf[i + 1] != '\n')
 				{
 					printf("\033[96;1m%i\033[0m : Empty line after pre-processors required\n",line_num);
+					errors++;
 					pre_proc++;
 				}
 				else if (pre_proc == 2)
@@ -95,6 +96,11 @@ int		disp_file(char *str)
 				if (buf[i + 1] == '\n' && buf[i + 2] == '\0')
 				{
 					printf("\033[96;1m%i\033[0m : Empty line at the end of the file\n",line_num);
+					errors++;
+				}
+				if (buf[i - 1] == ' ' || buf[i - 1] == '\t')
+				{
+					printf("\033[96;1m%i\033[0m : Trailing spaces at end of line\n",line_num);
 					errors++;
 				}
 			}

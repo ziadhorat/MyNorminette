@@ -14,9 +14,9 @@
 ###### ⚫New line after pre-proc (Checks for '\n' after the final '#')
 ###### ⚫Too many lines in function (Based on open and close curly braces { })
 ###### ⚫Final line can't be empty ('\0' after '\n' & '\n')
+###### ⚫Trailing spaces (Spaces before ' ' or '\t')
 
 ### To-Detect
-###### ⚫Trailing spaces (Spaces before ' ' or '\t')
 ###### ⚫Space after while/if/return etc
 
 ### To-Fix
