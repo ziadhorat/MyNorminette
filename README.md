@@ -22,6 +22,7 @@
 
 ### To-Detect
 ###### ⚫Space after while/if/return etc
+###### ⚫80 character per line
 
 ### To-Fix
 ###### ⚫All pre-processors at top of file (Technically only makes sure they're all together)
