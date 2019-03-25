@@ -7,6 +7,10 @@
 
 
 
+### Note
+###### ⚫Only works on .c files
+###### ⚫This is extremely messy code, I'm just trying to get basic detection working
+
 ### Detects
 ###### ⚫Empty lines (Gives error if there are multiple '\n's next to each other)
 ###### ⚫Incorrect header (Based on no. of lines)
