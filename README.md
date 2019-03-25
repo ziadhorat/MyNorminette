@@ -13,7 +13,7 @@
 
 ### Detects
 ###### ⚫Empty lines (Gives error if there are multiple '\n's next to each other)
-###### ⚫Incorrect header (Based on no. of lines)
+###### ⚫Incorrect header (Based on no. of lines that start with '/')
 ###### ⚫Empty line after header (Only checks if header is perfect)
 ###### ⚫New line after pre-proc (Checks for '\n' after the final '#')
 ###### ⚫Too many lines in function (Based on open and close curly braces { })
