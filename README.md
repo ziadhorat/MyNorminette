@@ -11,11 +11,13 @@
 ###### ⚫Empty lines (Gives error if there are multiple '\n's next to each other)
 ###### ⚫Incorrect header (Based on no. of lines)
 ###### ⚫Empty line after header (Only checks if header is perfect)
-###### ⚫All pre-processors at top of file (Technically only makes sure they're all together)
+###### ⚫New line after pre-proc (Checks for '\n' after the final '#')
 ###### ⚫Too many lines in function (Based on open and close curly braces { })
-###### ⚫Final line can't be empy ('\0' after '\n' & '\n')
+###### ⚫Final line can't be empty ('\0' after '\n' & '\n')
 
 ### To-Detect
-###### ⚫New line after pre-proc (Checks for '\n' after the final '#')
 ###### ⚫Trailing spaces (Spaces before ' ' or '\t')
 ###### ⚫Space after while/if/return etc
+
+### To-Fix
+###### ⚫All pre-processors at top of file (Technically only makes sure they're all together)

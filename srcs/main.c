@@ -6,7 +6,7 @@
 /*   By: zmahomed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/27 07:28:15 by zmahomed          #+#    #+#             */
-/*   Updated: 2019/03/23 17:56:57 by zmahomed         ###   ########.fr       */
+/*   Updated: 2019/03/25 18:56:50 by zmahomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,18 +54,27 @@ int		disp_file(char *str)
 					{
 						pre_proc++;
 					}
-					else if (pre_proc == 1)
+					else if (pre_proc == 2)
 					{
 						printf("\033[96;1m%i\033[0m : All pre-processors should be at the top\n",line_num);
 						errors++;
 						pre_proc++;
 					}	
 				}
+				else if (pre_proc == 1 || pre_proc == 3)
+					pre_proc++;
 				else if (buf[i + 1] == '\n' && buf[i + 2] == '\n')
 				{
 					printf("\033[96;1m%i\033[0m : Empty line\n",line_num);
 					errors++;
 				}
+				if (pre_proc == 2 && buf[i + 1] != '\n')
+				{
+					printf("\033[96;1m%i\033[0m : Empty line after pre-processors required\n",line_num);
+					pre_proc++;
+				}
+				else if (pre_proc == 2)
+					pre_proc++;
 				if (buf[i + 1] == '{' && func_count == 0)
 				{
 					func_count = 1;
@@ -77,7 +86,7 @@ int		disp_file(char *str)
 						func_count = 0;
 					if (buf[i + 1] == '}' && func_line - 1 > 25)
 					{
-						printf("\033[96;1m%i\033[0m : \033[31m%i\033[0m lines in func\n",line_num ,func_line - 1);
+						printf("\033[96;1m%i\033[0m : \033[31m%i\033[0m lines in function\n",line_num ,func_line - 1);
 						errors++;
 					}
 					else
@@ -104,9 +113,9 @@ int		main(int ac, char **av)
 {
 	(void)**av;
 	if (ac < 2)
-		printf("File name missing.");
+		printf("File name missing.\n");
 	if (ac > 2)
-		printf("Too many arguments.");
+		printf("Too many arguments.\n");
 	if (ac == 2)
 	{
 		printf("\033[33;1mFile: %s\n\n\033[0m",av[1]);
