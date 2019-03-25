@@ -16,6 +16,7 @@
 ###### ⚫New line after pre-proc (Checks for '\n' after the final '#')
 ###### ⚫Too many lines in function (Based on open and close curly braces { })
 ###### ⚫80 character per line max
+###### ⚫5 functions per file
 ###### ⚫Final line can't be empty ('\0' after '\n' & '\n')
 ###### ⚫Trailing spaces (Spaces before ' ' or '\t')
 
@@ -23,7 +24,6 @@
 ###### ⚫All pre-processors at top of file (Technically only makes sure they're all together)
 
 ### Coming soon (I'll do it at some point)
-###### ⚫5 functions per file
 ###### ⚫Space after while/if/return etc
 ###### ⚫If theres a curly brace, there can't be anything else on the line
 ###### ⚫Declaration and initialization can't be on the same line

@@ -6,7 +6,7 @@
 /*   By: zmahomed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/27 07:28:15 by zmahomed          #+#    #+#             */
-/*   Updated: 2019/03/26 00:47:07 by zmahomed         ###   ########.fr       */
+/*   Updated: 2019/03/26 00:55:19 by zmahomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int		disp_file(char *str)
 	int		char_count  = 0;
 	int		errors = 0;
 	int		pre_proc = 0;
+	int		tot_func = -1;
+	int		tot_func_b = 0;
 	char	buf[BUF_SIZE + 1];
 
 	if (fd == 3)
@@ -91,10 +93,14 @@ int		disp_file(char *str)
 				if (func_count == 1)
 				{
 					if (buf[i + 1] == '}')
+					{
+						tot_func++;
 						func_count = 0;
+					}
 					if (buf[i + 1] == '}' && func_line - 1 > 25)
 					{
 						printf("\033[96;1m%i\033[0m : \033[31m%i\033[0m lines in function\n",line_num ,func_line - 1);
+						tot_func++;
 						errors++;
 					}
 					else
@@ -110,7 +116,15 @@ int		disp_file(char *str)
 					printf("\033[96;1m%i\033[0m : Trailing spaces at end of line\n",line_num);
 					errors++;
 				}
+				if (tot_func > 5 && tot_func_b == 0)
+				{
+					printf("\033[96;1m%i\033[0m : \033[31m%i\033[0m functions\n",line_num, tot_func);
+					errors++;
+					tot_func_b++;
+				}
 			}
+			else if (buf[i] == '\t')
+				char_count+=4;
 			else
 				char_count++;
 			i++;
