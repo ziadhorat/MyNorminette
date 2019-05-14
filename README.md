@@ -1,29 +1,36 @@
-# MyNorminette (Extremely basic)
-### Features
+# MyNorminette (WIP)
 
 <p align="center">
   <img src="https://i.imgur.com/AW9MLPw.jpg">
 </p>
 
-### Note
-###### ⚫Only works on .c files
-###### ⚫This is extremely messy code, I'm just trying to get basic detection working, everythin is pretty much in one function, I repeat, this is horrible programming practices!
+### Detects
+###### [01] Incorrect 42header
+###### [02] Empty line required after 42header
+###### [03] Pre-processor/s needs to be at the top of file
+###### [04] Empty line required after pre-processor/s
+###### [05] Empty line 
+###### [06] Empty line at the end of the file
+###### [07] Empty line required after function
+###### [08] Space at the end of the line
+###### [09] Too many characters in line, max 80 characters
+###### [10] Too many lines in function, max 25 lines
+###### [11] Too many functions in file, max 5 functions
+###### [12] Curly braces need to be on their own line
 
-### Things that work??? (I didn't test)
-###### ⚫Empty lines (Gives error if there are multiple '\n's next to each other)
-###### ⚫Incorrect header (Based on no. of lines that start with '/')
-###### ⚫Empty line after header (Only checks if header is perfect)
-###### ⚫New line after pre-proc (Checks for '\n' after the final '#')
-###### ⚫Too many lines in function (Based on open and close curly braces { })
-###### ⚫80 character per line max
-###### ⚫5 functions per file
-###### ⚫Final line can't be empty ('\0' after '\n' & '\n')
-###### ⚫Trailing spaces (Spaces before ' ' or '\t')
-
-### Buggggz (I'll fix this...maybe?)
-###### ⚫All pre-processors at top of file (Technically only makes sure they're all together)
-
-### Coming soon (I'll do it at some point)
+### Planned
+###### ⚫Tabs should be used for spacing
 ###### ⚫Space after while/if/return etc
-###### ⚫If theres a curly brace, there can't be anything else on the line
 ###### ⚫Declaration and initialization can't be on the same line
+###### ⚫All declarations must bee at the top of the function
+###### ⚫Empty line after declarations
+
+### Known bugs
+###### Only works on .c files
+###### New version has not yet been tested
+###### Comments will throw alot of the detection off
+###### The line num is 1-3 lines before the actual error
+
+### Improvements
+###### Make header detection more robust, check format instead of just characters
+###### Make print_error take a value for error type instead of string for error message
